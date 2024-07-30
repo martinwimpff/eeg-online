@@ -46,11 +46,11 @@ def train_and_test(config: dict):
         y_pred = torch.concat(
             trainer.predict(model, datamodule.predict_dataloader()), dim=-1).T
 
-        # overall accuracies (trial-wise, trial-wise discrete, window-wise)
+        # overall accuracies (trial-wise)
         y_test = datamodule.test_dataset.tensors[1]
         taccs = ((y_pred.mean(dim=-1) > 0.5).float() == y_test).float()
 
-        # write to dataframes
+        # write to dataframe
         test_subject_ids = datamodule.get_test_subject_ids(fold_idx)
         trials_counter = 0
         trials_per_run = {

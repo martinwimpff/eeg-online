@@ -14,7 +14,7 @@ class ClassificationModule(pl.LightningModule):
                  weight_decay: float = 0.0,
                  optimizer: str = "adam",
                  scheduler: bool = False,
-                 max_epochs: int = 1000,
+                 max_epochs: int = 100,
                  warmup_epochs: int = 20,
                  **kwargs):
         super(ClassificationModule, self).__init__()

@@ -1,0 +1,13 @@
+run_dir: "lee_source"
+ckpt_name: "epoch=99-step=8300.ckpt"
+n_subjects: 5
+batch_size: 40
+max_epochs: 100  # supervised/unsupervised: 100/0
+reset_bn: False  # offline AdaBN (set False for supervised FT)
+
+finetuner_kwargs:
+  lr: 0.0001
+  weight_decay: 0.0
+  optimizer: "adam"
+  scheduler: True
+  warmup_epochs: 0
