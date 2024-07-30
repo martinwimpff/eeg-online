@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "eeg-online"
+version = "0.1.0"
+description = ""
+authors = ["martinwimpff"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "2.0.1"
+pytorch-lightning = "2.0.7"
+einops = "^0.7.0"
+mne = "^1.6.1"
+scikit-learn = "1.3.0"
+matplotlib = "3.5.3"
+flatten-dict = "^0.4.2"
+pandas = "^2.2.1"
+pyriemann = "^0.6"
+numpy = "^1.26.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

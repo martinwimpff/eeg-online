@@ -1,0 +1,32 @@
+n_subjects: 54
+n_folds: 54
+seed: 0
+max_epochs: 100
+log_model: False
+
+datamodule: "LeeDataModuleLMSO"
+preprocessing:
+  l_freq: 8
+  h_freq: 30
+  batch_size: 64
+  baseline_correction: False
+  tmin: 0.25
+  alignment: False
+
+model: "BaseNet"
+model_kwargs:
+  n_channels: 20
+  n_temporal_filters: 40
+  temp_filter_length_inp: 25
+  spatial_expansion: 1
+  pool_length_inp: 8
+  dropout_inp: 0.5
+  ch_dim: 16
+  temp_filter_length: 15
+  dropout: 0.5
+  padding_mode: "zeros"
+  lr: 0.001
+  weight_decay: 0.0
+  optimizer: "adam"
+  scheduler: True
+  warmup_epochs: 20
