@@ -1,2 +1,2 @@
-from .dreyer_datamodules import DreyerDataModuleLMSO, DreyerDataModuleWithin
-from .lee_datamodules import LeeDataModuleLMSO, LeeDataModuleWithin
+from .dreyer_datamodules import DreyerDataModuleLMSO, DreyerDataModuleTTA, DreyerDataModuleWithin
+from .lee_datamodules import LeeDataModuleLMSO, LeeDataModuleTTA, LeeDataModuleWithin

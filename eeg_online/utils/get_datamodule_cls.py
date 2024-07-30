@@ -1,11 +1,13 @@
-from eeg_online.datamodules import DreyerDataModuleLMSO, \
-    DreyerDataModuleWithin, LeeDataModuleLMSO, LeeDataModuleWithin
+from eeg_online.datamodules import DreyerDataModuleLMSO, DreyerDataModuleTTA, \
+    DreyerDataModuleWithin, LeeDataModuleLMSO, LeeDataModuleTTA, LeeDataModuleWithin
 
 
 dm_dict = dict(
     DreyerDataModuleLMSO=DreyerDataModuleLMSO,
+    DreyerDataModuleTTA=DreyerDataModuleTTA,
     DreyerDataModuleWithin=DreyerDataModuleWithin,
     LeeDataModuleLMSO=LeeDataModuleLMSO,
+    LeeDataModuleTTA=LeeDataModuleTTA,
     LeeDataModuleWithin=LeeDataModuleWithin
 )
 

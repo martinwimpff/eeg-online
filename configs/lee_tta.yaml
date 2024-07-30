@@ -1,0 +1,7 @@
+run_dir: "lee_source"
+ckpt_name: "epoch=99-step=8300.ckpt"
+n_subjects: 5
+tta_method: "norm"  # ["norm", "alignment"]
+tta_config:
+  alignment: False  # [False, "euclidean", "riemann]
+  alpha: 0.001
