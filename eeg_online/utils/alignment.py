@@ -5,13 +5,27 @@ from scipy import linalg
 
 def _alignment(method: str, x: np.ndarray, x_test: np.ndarray = None,
                return_cov: bool = False, n_windows_per_trial: int = 61):
+    trial_covs = []
+    for trial in x:
+        windows = []
+        for i in range(n_windows_per_trial):
+            windows.append(trial[:, i * 16:i * 16 + 256])
+        windows = np.array(windows)
+        window_covmats = np.matmul(windows, windows.transpose((0, 2, 1)))
+        if method == "euclidean":
+            trial_covs.append(window_covmats.mean(0))
+        elif method == "riemann":
+            trial_covs.append(mean_riemann(window_covmats).astype("float32"))
+        else:
+            raise NotImplementedError
+
     if method == "euclidean":
-        R = np.matmul(x, x.transpose((0, 2, 1))).mean(0)
+        R = np.array(trial_covs).mean(0)
     elif method == "riemann":
-        covmats = np.matmul(x, x.transpose((0, 2, 1)))
-        R = mean_riemann(covmats).astype("float32")
+        R = mean_riemann(np.array(trial_covs)).astype("float32")
     else:
         raise NotImplementedError
+
     R_op = linalg.inv(linalg.sqrtm(R))
     x = np.matmul(R_op, x)
     if x_test is not None:
