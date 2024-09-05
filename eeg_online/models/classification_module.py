@@ -52,7 +52,10 @@ class ClassificationModule(pl.LightningModule):
         x, y = batch
         y_hat = torch.sigmoid(self.forward(x))
 
-        loss = F.binary_cross_entropy(y_hat.mean(dim=-1), y.float())
+        y_windows = y.unsqueeze(-1).repeat(1, y_hat.shape[-1]).reshape(
+            y_hat.shape[0] * y_hat.shape[-1])
+        y_hat_reshaped = y_hat.reshape(y_hat.shape[0] * y_hat.shape[-1])
+        loss = F.binary_cross_entropy(y_hat_reshaped, y_windows.float())
 
         acc = accuracy(y_hat.mean(dim=-1), y, task="binary")
 
