@@ -1,4 +1,5 @@
 # eeg-online
+Official repository for [Tailoring Deep Learning for Real-Time Brain-Computer Interfaces: From Offline Models to Calibration-Free Online Decoding](https://www.preprints.org/manuscript/202407.2370/v2).
 ## Usage
 ### Data
 Download the datasets from 
@@ -29,10 +30,10 @@ In case of any specific questions please
 If you find this repository useful, please cite our work
 ```
 @article{202407.2370,
-	doi = {10.20944/preprints202407.2370.v1},
-	url = {https://doi.org/10.20944/preprints202407.2370.v1},
+	doi = {10.20944/preprints202407.2370.v2},
+	url = {https://doi.org/10.20944/preprints202407.2370.v2},
 	year = 2024,
-	month = {July},
+	month = {September},
 	publisher = {Preprints},
 	author = {Martin Wimpff and Jan Zerfowski and Bin Yang},
 	title = {Tailoring Deep Learning for Real-Time Brain-Computer Interfaces: From Offline Models to Calibration-Free Online Decoding},
