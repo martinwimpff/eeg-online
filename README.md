@@ -29,14 +29,10 @@ In case of any specific questions please
 ## Citation
 If you find this repository useful, please cite our work
 ```
-@article{202407.2370,
-	doi = {10.20944/preprints202407.2370.v2},
-	url = {https://doi.org/10.20944/preprints202407.2370.v2},
-	year = 2024,
-	month = {September},
-	publisher = {Preprints},
-	author = {Martin Wimpff and Jan Zerfowski and Bin Yang},
-	title = {Tailoring Deep Learning for Real-Time Brain-Computer Interfaces: From Offline Models to Calibration-Free Online Decoding},
-	journal = {Preprints}
+@article{wimpff2025tailoring,
+  title={Tailoring deep learning for real-time brain-computer interfaces: From offline models to calibration-free online decoding},
+  author={Wimpff, Martin and Zerfowski, Jan and Yang, Bin},
+  journal={arXiv preprint arXiv:2507.06779},
+  year={2025}
 }
 ```
