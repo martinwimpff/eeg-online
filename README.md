@@ -1,5 +1,5 @@
 # eeg-online
-Official repository for [Tailoring Deep Learning for Real-Time Brain-Computer Interfaces: From Offline Models to Calibration-Free Online Decoding]([https://www.preprints.org/manuscript/202407.2370/v2](https://arxiv.org/abs/2507.06779)).
+Official repository for [Tailoring Deep Learning for Real-Time Brain-Computer Interfaces: From Offline Models to Calibration-Free Online Decoding](https://arxiv.org/abs/2507.06779).
 ## Usage
 ### Data
 Download the datasets from 
